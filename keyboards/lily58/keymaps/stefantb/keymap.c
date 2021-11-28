@@ -8,12 +8,11 @@ enum layer_number {
   _ADJUST,
 };
 
-// #define KC_Ð KC_LBRC
-// #define KC_Þ KC_SLSH
-// #define KC_Æ KC_SCLN
-// #define KC_Ö KC_MINS
-
-
+#define KS_MUTE KC__MUTE
+#define KS_VOLU KC__VOLUP
+#define KS_VOLD KC__VOLDOWN
+// toggle touchpad
+#define KS_TCHT KC_F21
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -80,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, IS_QUOT, IS_TILD,                     KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX, XXXXXXX, \
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PSCR, KC_INS,   XXXXXXX, XXXXXXX,  KC_MUTE, KC_VOLD, KC_VOLU, XXXXXXX, XXXXXXX, XXXXXXX, \
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PSCR, KC_INS,   XXXXXXX, XXXXXXX,  KS_MUTE, KS_VOLD, KS_VOLU, KS_TCHT,  XXXXXXX, XXXXXXX, \
                              _______, _______, _______,  _______, _______,  _______, _______, _______ \
 ),
 /* ADJUST
